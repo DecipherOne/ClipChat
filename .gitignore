@@ -1,0 +1,6 @@
+/chat_data/migrations/__pycache__/*.pyc
+/clipchat/__pycache__/*.pyc
+*.pyc
+*.un~
+*.py~
+*.html~
