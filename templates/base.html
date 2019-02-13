@@ -55,13 +55,13 @@
         {% endblock %}
         {% block nav-global %}{% endblock %}
     </div>
-    <!-- END Header -->
+    <!-- END Header 
     {% block breadcrumbs %}
     <div class="breadcrumbs">
     <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
-    {% endblock %}
+    {% endblock %}-->
     {% endif %}
 
     {% block messages %}
@@ -85,7 +85,16 @@
     </div>
     <!-- END Content -->
 
-    {% block footer %}<div id="footer"></div>{% endblock %}
+    {% block footer %}
+	{% now "Y" as current_year %}
+	{% load static %}
+	<div id="footer">
+		<div class="footerCopy">
+			&copy Clip Chat {{current_year}}
+		</div>
+		<script src="{% static '/js/test.js' %}"></script>
+	</div>
+	{% endblock %}
 </div>
 <!-- END Container -->
 
