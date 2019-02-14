@@ -2,11 +2,27 @@
 {% block content %}
 {% if user.is_authenticated %}
 
-  You are logged in.
-  
-{% else %}
 
-  You should be getting redirected.
+<div id="profileShell">
+	<div id="profileContainer">
+		{% block messageProfile %}
+		{% endblock %}
+	</div>
+	<div id="messageFormContainer">
+		{% block newMessageForm %}
+		{% endblock %}
+	</div>
+</div>
+<div id="messageFeedShell">
+	<div id="messageFeedContainer">
+	   {% block messageFeed %}
+	   {% endblock %}
+	</div>
+</div>
+  You are logged in. Go to chat view
+  Show our top account and post form
+  
+  Beneath, show the message feed.
 {% endif %}
 
 {% endblock %}
