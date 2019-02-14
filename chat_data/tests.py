@@ -26,7 +26,7 @@ class TestViews(Setup_Class):
 		
 		if not user.is_authenticated :
 			self.assertEqual(response.status_code, 302)
-			self.assertEqual(response.url,"/account/login")
+			self.assertEqual(response.url, "/account/login")
 		else :
 			self.assertFalse(True,"user is logged in so no redirect")
 	
@@ -38,12 +38,33 @@ class TestViews(Setup_Class):
 		user = auth.get_user(self.client)
 		
 		if user.is_authenticated :
-			self.assertEqual(response.status_code, 200)
+			self.assertEqual(response.status_code, 302)
+			self.assertEqual(response.url, "messages/")
+			
 		else :
 			self.assertTrue(False,"Could not login user for test.")
+	
+
+class TestForms(Setup_Class):
+	"Testing form submissions."
+	
+	def loginUserForTests(self):
+		self.loggedInUser = self.loginUser()
+		response = self.client.get("/")
+		return auth.get_user(self.client)
 		
 		
-	#def test_profile_and_chat_text_box_render(self):
+	def test_post_message_successful_when_form_is_valid(self):
+		
+		user = self.loginUserForTests()
+		
+		if user.is_authenticated :
+			user = "something"
+			#fill out the form data on the page
+			#submit the form data
+			#verify the response 
+		else :
+			self.assertTrue(False,"Could not login user for test.")
 	
 
 # Create your tests here.

@@ -1,28 +1,26 @@
 {% extends 'base.html' %}
+
 {% block content %}
-{% if user.is_authenticated %}
+	{% if user.is_authenticated %}
 
 
-<div id="profileShell">
-	<div id="profileContainer">
-		{% block messageProfile %}
-		{% endblock %}
-	</div>
-	<div id="messageFormContainer">
-		{% block newMessageForm %}
-		{% endblock %}
-	</div>
-</div>
-<div id="messageFeedShell">
-	<div id="messageFeedContainer">
-	   {% block messageFeed %}
-	   {% endblock %}
-	</div>
-</div>
-  You are logged in. Go to chat view
-  Show our top account and post form
-  
-  Beneath, show the message feed.
-{% endif %}
-
+		<div id="profileShell">
+			<div id="profileContainer">
+				{% block messageProfile %}
+				{% endblock %}
+			</div>
+			<div id="messageFormContainer">
+				{% block newMessageForm %}
+					{% include "post_message" %}
+				{% endblock %}
+			</div>
+		</div>
+		<div id="messageFeedShell">
+			<div id="messageFeedContainer">
+			   {% block messageFeed %}
+			   {% endblock %}
+			</div>
+		</div>
+	 
+	{% endif %}
 {% endblock %}
