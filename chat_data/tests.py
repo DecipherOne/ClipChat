@@ -1,5 +1,4 @@
-from django.test import TestCase
-from django.test import Client
+from django.test import TestCase , Client
 from django.contrib import auth
 from django.contrib.auth import get_user_model, authenticate
 
@@ -9,7 +8,7 @@ class Setup_Class(TestCase):
 		self.client = Client()
 		self.User = get_user_model()
 		
-	def loginSuperUser(self):
+	def loginUser(self):
 		self.userInstance = self.User.objects.create(username ='superUser001', password = '12345PW', is_active = True, is_staff=True, is_superuser=True)
 		self.userInstance.set_password('111Super$')
 		self.userInstance.save()
@@ -34,7 +33,7 @@ class TestViews(Setup_Class):
 		
 	def test_redirect_to_chat_index_when_user_authenticates(self):
 		
-		self.loggedInSuperUser = self.loginSuperUser()
+		self.loggedInUser = self.loginUser()
 		response = self.client.get("/")
 		user = auth.get_user(self.client)
 		

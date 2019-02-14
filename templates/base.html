@@ -55,7 +55,7 @@
         {% endblock %}
         {% block nav-global %}
 		{% if user.is_authenticated %}
-			<span class='right'><a href="../../account/logout">{% trans 'Log Out' %}</a></span>
+			<span class='object-tools'><a href="../../account/logout">{% trans 'Log Out' %}</a></span>
 		{% endif %}
 		{% endblock %}
     </div>
