@@ -10,7 +10,10 @@
 {% block responsive %}
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}">
-    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    {% if LANGUAGE_BIDI %}
+		<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">
+	{% endif %}
 {% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
 </head>
@@ -21,7 +24,7 @@
 
 <!-- Container -->
 <div id="container">
-
+	{% load static %}
     {% if not is_popup %}
     <!-- Header -->
     <div id="header">
@@ -85,12 +88,12 @@
 
     {% block footer %}
 	{% now "Y" as current_year %}
-	{% load static %}
+	
 	<div id="footer">
 		<div class="footerCopy">
 			&copy Clip Chat {{current_year}}
 		</div>
-		<script src="{% static '/js/test.js' %}"></script>
+		<script src="{% static '/js/pm001.js' %}"></script>
 	</div>
 	{% endblock %}
 </div>
