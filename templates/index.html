@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+
+  You are logged in.
+  
+{% else %}
+
+  You should be getting redirected.
+{% endif %}
+
+{% endblock %}
