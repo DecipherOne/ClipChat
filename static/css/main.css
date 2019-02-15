@@ -1,221 +1,53 @@
-/* line 1, ../build/sass/main.scss */
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  font-size: 18px;
-  font-family: Consolas,Terminal,Arial;
-}
+html, body { width: 100%; margin: 0; padding: 0; background-color: black; font-size: 18px; font-family: Consolas,Terminal,Arial; }
 
-/* line 11, ../build/sass/main.scss */
-body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
+body { overflow-y: scroll; overflow-x: hidden; }
 
-/* line 18, ../build/sass/main.scss */
-button {
-  font-size: 18px;
-  padding: 8px;
-}
+button { font-size: 18px; padding: 8px; }
 
-/* line 24, ../build/sass/main.scss */
-a {
-  color: #4CBB17;
-}
-/* line 26, ../build/sass/main.scss */
-a:hover {
-  color: #bb9800;
-}
-/* line 31, ../build/sass/main.scss */
-a:visited {
-  color: #00a1bb;
-}
+a { color: #4CBB17; }
+a:hover { color: #bb9800; }
+a:visited { color: #00a1bb; }
 
-/* line 38, ../build/sass/main.scss */
-#profileShell, #messageFeedShell {
-  min-width: 360px;
-  height: 422px;
-  background-color: #c0f0ff;
-  border: solid 2px;
-  border-radius: 3px;
-  box-shadow: 10px 5px;
-  opacity: 0.6;
-}
-@media only screen and (max-width: 799px) {
-  /* line 38, ../build/sass/main.scss */
-  #profileShell, #messageFeedShell {
-    position: relative;
-    top: 80px;
-  }
-}
+#profileShell, #messageFeedShell { min-width: 360px; height: 422px; background-color: #c0f0ff; border: solid 2px; border-radius: 3px; box-shadow: 10px 5px; opacity: 0.6; }
+@media only screen and (max-width: 799px) { #profileShell, #messageFeedShell { position: relative; top: 80px; } }
 
-/* line 54, ../build/sass/main.scss */
-#messageFeedShell {
-  height: 857px;
-}
+#messageFeedShell { height: 857px; }
 
-/* line 59, ../build/sass/main.scss */
-.right {
-  float: right;
-}
+.right { float: right; }
 
-/* line 64, ../build/sass/main.scss */
-.absolutelyCentered {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -0.42em);
-}
+.absolutelyCentered { position: absolute; left: 50%; transform: translate(-50%, -0.42em); }
 
-/* line 71, ../build/sass/main.scss */
-#content {
-  padding: 0px !important;
-  width: 100%;
-}
+#content { padding: 0px !important; width: 100%; }
 
-/* line 76, ../build/sass/main.scss */
-#profileContainer, #messageFeedContainer, #messageFormContainer {
-  position: relative;
-  left: 25%;
-  margin-top: 16px;
-  background-color: #fcfcfc;
-  width: 90%;
-  height: 45%;
-  max-width: 1024px;
-  min-width: 320px;
-  border: solid 2px;
-  border-radius: 3px;
-}
-@media only screen and (max-width: 1399px) {
-  /* line 76, ../build/sass/main.scss */
-  #profileContainer, #messageFeedContainer, #messageFormContainer {
-    left: 5%;
-  }
-}
+#profileContainer, #messageFeedContainer, #messageFormContainer { position: relative; left: 25%; margin-top: 16px; background-color: #fcfcfc; width: 90%; height: 45%; max-width: 1024px; min-width: 320px; border: solid 2px; border-radius: 3px; }
+@media only screen and (max-width: 1399px) { #profileContainer, #messageFeedContainer, #messageFormContainer { left: 5%; } }
 
-/* line 95, ../build/sass/main.scss */
-#profileContainer .userDataSpan {
-  margin-top: 24px;
-  margin-left: 3%;
-}
+#profileContainer .userDataSpan { margin-top: 24px; margin-left: 3%; }
 
-/* line 101, ../build/sass/main.scss */
-#messageFeedContainer {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 90%;
-}
+#messageFeedContainer { overflow-y: scroll; overflow-x: hidden; height: 90%; }
 
-/* line 107, ../build/sass/main.scss */
-#header {
-  position: relative;
-  width: auto;
-}
-@media only screen and (max-width: 799px) {
-  /* line 107, ../build/sass/main.scss */
-  #header {
-    position: fixed;
-    width: 96%;
-    z-index: 999;
-  }
-}
+#header { position: relative; width: auto; }
+@media only screen and (max-width: 799px) { #header { position: fixed; width: 96%; z-index: 999; } }
 
-/* line 121, ../build/sass/main.scss */
-#messageFormContainer {
-  border-top: none;
-  bottom: 20px;
-}
-/* line 125, ../build/sass/main.scss */
-#messageFormContainer h2 {
-  padding-left: 12%;
-}
-/* line 130, ../build/sass/main.scss */
-#messageFormContainer form label {
-  display: none;
-}
+#messageFormContainer { border-top: none; bottom: 20px; }
+#messageFormContainer h2 { padding-left: 12%; }
+#messageFormContainer form label { display: none; }
 
-/* line 137, ../build/sass/main.scss */
-#id_message_body {
-  height: 100px;
-  width: 60%;
-  margin-left: 12%;
-  resize: none;
-  background-color: #e4f0d5;
-}
+#id_message_body { height: 100px; width: 60%; margin-left: 12%; resize: none; background-color: #e4f0d5; }
 
-/* line 145, ../build/sass/main.scss */
-.iconImageContainer {
-  width: 150px;
-  height: 150px;
-  display: block;
-  background-color: #495454;
-  border: solid 2px;
-  border-radius: 2px;
-  float: left;
-  margin-top: 20px;
-  margin-left: 12%;
-}
-/* line 156, ../build/sass/main.scss */
-.iconImageContainer p {
-  text-align: center;
-  font-size: 30px;
-  position: absolute;
-  width: 150px;
-}
+.iconImageContainer { width: 150px; height: 150px; display: block; background-color: #495454; border: solid 2px; border-radius: 2px; float: left; margin-top: 20px; margin-left: 12%; }
+.iconImageContainer p { text-align: center; font-size: 30px; position: absolute; width: 150px; }
 
-/* line 164, ../build/sass/main.scss */
-.userDataSpan {
-  min-width: 150px;
-  min-height: 24px;
-  float: left;
-  display: inline-block;
-  font-weight: bold;
-}
+.userDataSpan { min-width: 150px; min-height: 24px; float: left; display: inline-block; font-weight: bold; }
 
-/* line 172, ../build/sass/main.scss */
-.userIconImage {
-  background-color: #fff6ba;
-  width: 142px;
-  height: 142px;
-  display: block;
-  border-radius: 72px;
-  margin-top: 3%;
-  margin-left: 5%;
-  overflow: hidden;
-}
+.userIconImage { background-color: #fff6ba; width: 142px; height: 142px; display: block; border-radius: 72px; margin-top: 2%; margin-left: 2%; overflow: hidden; border: solid 2px #f5dd5d; }
 
-/* line 183, ../build/sass/main.scss */
-.messageUserDataContainer {
-  min-height: 180px;
-}
-/* line 187, ../build/sass/main.scss */
-.messageUserDataContainer .iconImageContainer {
-  margin-top: 10px;
-  margin-left: 3%;
-}
-/* line 192, ../build/sass/main.scss */
-.messageUserDataContainer .userDataSpan {
-  margin-top: 12px;
-  margin-left: 2%;
-}
+.messageUserDataContainer { min-height: 180px; }
+.messageUserDataContainer .iconImageContainer { margin-top: 10px; margin-left: 3%; }
+.messageUserDataContainer .userDataSpan { margin-top: 12px; margin-left: 2%; }
 
-/* line 198, ../build/sass/main.scss */
-.oddCol {
-  background-color: #979797;
-}
-/* line 201, ../build/sass/main.scss */
-.oddCol .userDataSpan {
-  margin-left: 5%;
-}
-/* line 206, ../build/sass/main.scss */
-.oddCol .messageContainer {
-  margin-left: 56px;
-}
+.oddCol { background-color: #979797; }
+.oddCol .userDataSpan { margin-left: 5%; }
+.oddCol .messageContainer { margin-left: 56px; }
 
-/* line 211, ../build/sass/main.scss */
-.messageContainer {
-  position: absolute;
-  margin-left: 200px;
-  margin-top: 42px;
-}
+.messageContainer { position: absolute; margin-left: 200px; margin-top: 42px; }
