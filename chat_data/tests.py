@@ -47,6 +47,17 @@ class TestViews(Setup_Class):
 		else :
 			self.assertTrue(False,"Could not login user for test.")
 	
+	def test_display_messages_renders(self):
+		
+		self.loggedInUser = self.loginUser()
+		response = self.client.get("messages/feed/")
+		user = auth.get_user(self.client)
+		
+		if user.is_authenticated :
+			self.assertEqual(response.status_code, 200)
+			
+		else :
+			self.assertTrue(False,"Could not login user for test.")
 
 class TestForms(Setup_Class):
 	"Testing form submissions."
