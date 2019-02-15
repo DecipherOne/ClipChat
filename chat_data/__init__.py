@@ -1,1 +1,1 @@
-from chat_data.tests import *
+#from chat_data.tests import *

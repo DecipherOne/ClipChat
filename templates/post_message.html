@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block newMessageForm %}
+    <h2>New Message</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form}}
+        <button type="submit" class="save btn btn-default">Post Message</button>
+    </form>
+{% endblock %}
+
+{% block messageFeed %}
+	{% include "message_feed.html" %}
+{% endblock %}
