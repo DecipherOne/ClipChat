@@ -2,7 +2,7 @@
 {
 	window.console.log("We have static files");
 })();
-(function ClipChatMain()
+(function ClipChatMain2()
 {
     window.console.log("We have static files 2");
 })();
