@@ -1,11 +1,13 @@
 
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from .forms import PostMessage
 from .models import Message
 from django.utils import timezone
+
 
 def signup(request):
     if request.method == 'POST':
@@ -38,10 +40,13 @@ def post_message(request):
 			message.author_id = request.user.id
 			message.date_time_created = timezone.now()
 			message.save()
+			return redirect('/')
 
 	form = PostMessage()
+	messages = Message.objects.all().order_by('id').reverse()
+	users = User.objects.all()
 		
-	return render(request,'post_message.html', {'form':form})
+	return render(request,'post_message.html', {'form':form,'messages':messages,'users':users})
 	
 def display_message_feed(request):
 	if request.method != "GET":

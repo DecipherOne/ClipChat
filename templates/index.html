@@ -6,8 +6,12 @@
 
 		<div id="profileShell">
 			<div id="profileContainer">
-				{% block messageProfile %}
-				{% endblock %}
+				<span class="iconImageContainer">
+					<p>Image Place Holder</p>
+					 <span class="userIconImage">
+					 </span>
+				</span>
+				<span class="userDataSpan">Welcome : {{ user.username }}</span>
 			</div>
 			<div id="messageFormContainer">
 				{% block newMessageForm %}
@@ -18,7 +22,6 @@
 		<div id="messageFeedShell">
 			<div id="messageFeedContainer">
 			   {% block messageFeed %}
-				{% include "message_feed" %}
 			   {% endblock %}
 			</div>
 		</div>
