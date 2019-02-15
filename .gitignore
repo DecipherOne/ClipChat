@@ -9,3 +9,4 @@
 /static/build/.sass-cache/ddc59d8255fbd8d3bf88bb356bf228dc3413e3af/*.scssc
 /chat_data/__pycache__/*.pyc
 /chat_data/__pycache__/models.cpython-36.pyc
+/*.sqlite3
