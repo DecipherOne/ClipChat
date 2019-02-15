@@ -1,24 +1,40 @@
 
 <div class="messageFeedContainer">
-
 {% for message in messages %}
-	<div class="messageUserDataContainer">
-		<span class="iconImageContainer">
-			<p>Image Place Holder</p>
-		 <span class="userIconImage">
-		 </span>
-		</span>
-		{% for user in users %}
-			{% if user.id == message.author_id %}
-			<span class="userDataSpan">Name : {{ user.username }}</span>
-			{% endif %}
-		{% endfor %}
-		<span class="userDataSpan">Time Created : {{ message.date_time_created }}</span>
-		
-	</div>
-	
-	<div class="messageContainer">
-		{{message.message_body }}
-	</div>
+	{% if message.id|divisibleby:2 %}
+		<div class="messageUserDataContainer">
+			<span class="iconImageContainer">
+				<p>Image Place Holder</p>
+			 <span class="userIconImage">
+			 </span>
+			</span>
+			{% for user in users %}
+				{% if user.id == message.author_id %}
+				<span class="userDataSpan">Name : {{ user.username }}</span>
+				{% endif %}
+			{% endfor %}
+			<span class="userDataSpan">Time Created : {{ message.date_time_created }}</span>
+			<div class="messageContainer">
+				{{message.message_body }}
+			</div>
+		</div>
+	{% else %}
+		<div class="messageUserDataContainer oddCol">
+			{% for user in users %}
+				{% if user.id == message.author_id %}
+				<span class="userDataSpan">Name : {{ user.username }}</span>
+				{% endif %}
+			{% endfor %}
+			<span class="userDataSpan">Time Created : {{ message.date_time_created }}</span>
+			<div class="messageContainer">
+				{{message.message_body }}
+			</div>
+			<span class="iconImageContainer">
+				<p>Image Place Holder</p>
+			 <span class="userIconImage">
+			 </span>
+			</span>
+		</div>
+	{% endif %}
 {% endfor %}
 </div>
