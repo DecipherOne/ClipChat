@@ -177,4 +177,39 @@ a{
   border-radius: 50%;
   margin-top: 20%;
   margin-left: 16%;
+  overflow:hidden;
+}
+
+.messageUserDataContainer{
+
+  min-height: 180px;
+
+  .iconImageContainer{
+      margin-top:10px;
+      margin-left:3%;
+  }
+
+  .userDataSpan{
+    margin-top:12px;
+    margin-left: 2%;
+  }
+}
+
+.oddCol{
+  background-color: #979797;
+
+  .userDataSpan
+  {
+    margin-left: 5%;
+  }
+
+  .messageContainer{
+    margin-left: 56px;
+  }
+}
+
+.messageContainer{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 42px;
 }

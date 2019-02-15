@@ -182,4 +182,40 @@ a:visited {
   border-radius: 50%;
   margin-top: 20%;
   margin-left: 16%;
+  overflow: hidden;
+}
+
+/* line 183, ../build/sass/main.scss */
+.messageUserDataContainer {
+  min-height: 180px;
+}
+/* line 187, ../build/sass/main.scss */
+.messageUserDataContainer .iconImageContainer {
+  margin-top: 10px;
+  margin-left: 3%;
+}
+/* line 192, ../build/sass/main.scss */
+.messageUserDataContainer .userDataSpan {
+  margin-top: 12px;
+  margin-left: 2%;
+}
+
+/* line 198, ../build/sass/main.scss */
+.oddCol {
+  background-color: #979797;
+}
+/* line 201, ../build/sass/main.scss */
+.oddCol .userDataSpan {
+  margin-left: 5%;
+}
+/* line 206, ../build/sass/main.scss */
+.oddCol .messageContainer {
+  margin-left: 56px;
+}
+
+/* line 211, ../build/sass/main.scss */
+.messageContainer {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 42px;
 }
