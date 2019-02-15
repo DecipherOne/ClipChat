@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from .forms import PostMessage
+from .models import Message
 from django.utils import timezone
 
 def signup(request):
@@ -38,7 +39,13 @@ def post_message(request):
 			message.date_time_created = timezone.now()
 			message.save()
 
-	
 	form = PostMessage()
 		
 	return render(request,'post_message.html', {'form':form})
+	
+def display_message_feed(request):
+	if request.method != "GET":
+		return
+	messages = Message.objects.all().order_by('id')
+	return render(request,'message_feed.html', {'messages':messages})
+	

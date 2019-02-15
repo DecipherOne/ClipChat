@@ -50,7 +50,7 @@ class TestViews(Setup_Class):
 	def test_display_messages_renders(self):
 		
 		self.loggedInUser = self.loginUser()
-		response = self.client.get("messages/feed/")
+		response = self.client.get("/messages/feed/")
 		user = auth.get_user(self.client)
 		
 		if user.is_authenticated :

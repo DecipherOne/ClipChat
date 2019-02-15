@@ -1,0 +1,19 @@
+{% block messageFeed %}
+    <div class="messageFeedContainer">
+	
+	{% for message in messages %}
+		<div class="messageUserDataContainer">
+			Name : {{ message.author_id }}
+			Time Created : {{ message.date_time_created }}
+			<span class="iconImageContainer">
+			 <span class="userIconImage">
+			 </span>
+			</span>
+		</div>
+		
+		<div class="messageContainer">
+			{{message.message_body }}
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}
