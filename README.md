@@ -1,2 +1,13 @@
 # ClipChat
-Django Chat Server/Client
+Simple Chat Program
+
+![screenshot](clipChatImage.png)
+
+### Frame Works
+- Django
+
+
+### Languages
+- Python
+- Javascript
+- Sass, CSS
