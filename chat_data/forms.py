@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Message, MessageAuthor
+from .models import Message
 
 class PostMessage(forms.ModelForm):
 

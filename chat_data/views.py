@@ -37,8 +37,8 @@ def post_message(request):
 			message.author_id = request.user.id
 			message.date_time_created = timezone.now()
 			message.save()
-			#return redirect('post_detail', pk=post.pk)
-	else:
-		form = PostMessage()
+
+	
+	form = PostMessage()
 		
 	return render(request,'post_message.html', {'form':form})

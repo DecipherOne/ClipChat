@@ -1,6 +1,9 @@
 from django.test import TestCase , Client
 from django.contrib import auth
 from django.contrib.auth import get_user_model, authenticate
+from chat_data import forms as chatForm
+from django.utils import timezone
+
 
 class Setup_Class(TestCase):
 
@@ -59,13 +62,24 @@ class TestForms(Setup_Class):
 		user = self.loginUserForTests()
 		
 		if user.is_authenticated :
-			user = "something"
-			#fill out the form data on the page
-			#submit the form data
-			#verify the response 
+			form = chatForm.PostMessage(data={ 'message_body':"This is a message test."})
+			self.assertTrue(form.is_valid())
+
 		else :
 			self.assertTrue(False,"Could not login user for test.")
 	
+	
+	def test_invalid_form_data(self):
+	
+		user = self.loginUserForTests()
+		
+		if user.is_authenticated :
+			form = chatForm.PostMessage(data={ 'message_body':""})
+			self.assertFalse(form.is_valid())
+			
+
+		else :
+			self.assertTrue(False,"Could not login user for test.")
 
 # Create your tests here.
 
